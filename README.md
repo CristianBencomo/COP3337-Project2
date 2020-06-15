@@ -1,14 +1,11 @@
-## Getting Started
+## COP3337 Project 2
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This project is an assignment for COP 3337 for Profesor Richar whitaker.
 
-## Folder Structure
+## Contents:
 
-The workspace contains two folders by default, where:
+The project folder includes the assignment pdf and the src project folder with multiple packages that contain multiple classes within them.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Note:
 
-## Dependency Management
-
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
+This project is still a work in progress
