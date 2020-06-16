@@ -1,26 +1,18 @@
 //=============================================================================
-// PROGRAMMER: Your name
-// PANTHER ID: Your panther ID
+// PROGRAMMER: Cristian Bencomo
+// PANTHER ID: 6044774
 //
 // CLASS: COP3337
-// SECTION: Your class section: example U01
-// SEMESTER: The current semester: example Spring 2020
-// CLASSTIME: Your COP3337 course meeting time :example T/TH 9:00-10:15 am
+// SECTION: Your class section: RVDC
+// SEMESTER: The current semester: Summer 2020
+// CLASSTIME: Online
 //
-// Project: Put what this project is: example Lab 5 or Project 1
-// DUE:
+// Project: Put what this project is: Project 2
+// DUE: June 21st 2020
 //
 // CERTIFICATION: I understand FIU’s academic policies, and I certify that this work is my 
 //                own and that none of it is the work of any other person.
 //=============================================================================
-
-/*
-Remember, I will not except late assignments. So please check the due date of the assignment.
-IMPORTANT, you must have the File Header shown below with your information entered on the 
-file at contains the project main method. If you do not have this header with your 
-information, I will take 40% off your assignment grade.
-*/
-
 
 package app;
 
@@ -43,163 +35,101 @@ public class Controller {
    
     public static void main(String[] args) {
         
-System.out.println("//////////////////////////////////////////////");    
-System.out.println("Section 1");       
-System.out.println("//////////////////////////////////////////////");  
-
-// STEP 1
-
-
-       // create four items instance 
-       // with the following data
-       
-/*
-       item 1  data -> "Mitutoyo 513-403-10E", 
-                       "DIAL TEST INDICATOR, BASIC SET, STANDARD, .008 IN, . 0001 IN GRAD, WHITE DIAL ",
-                       139.16
-
-       item 2 data -> "Garmin Forerunner 935",
-                      "Premium GPS running/triathlon watch with wrist-based heart rate ",
-                      284.49
+        System.out.println("//////////////////////////////////////////////");    
+        System.out.println("Section 1");       
+        System.out.println("//////////////////////////////////////////////");  
        
 
-       
-       item 3 data -> "CROC Classic Clog",
-                      "Iconic clog that started a comfort revolution around the world",
-                      40.99
-       
-       item4 data -> "Adidas Ultra Boost PB",
-                     "Offers a plush, yet bouncy ride with an updated upper is built for speed.",
-                     105.95
-       
-       item5 data -> "Macbook Pro 13",
-                     "1.4GHz quad-core 8th-generation Intel Core i5 processor",
-                     1399.00
-*/
-       
-       // YOUR CODE HERE
-     
+        Item item1 = new Item("Mitutoyo 513-403-10E", 
+                "DIAL TEST INDICATOR, BASIC SET, STANDARD, .008 IN, . 0001 IN GRAD, WHITE DIAL ",
+                 139.16);
 
-        
-      
-       
-       // create 3 person instances 
-       // with the following data
-/*       
-        person1 -> "Ava", "Davis", "704 Brickell Ave", "Superman", 760       
-        person2 -> "John", "Smith", "340 S.W. 13 Street", "myPassword123", 680
-        person3 -> "Bill", "Johnson", "100 Ocean Dr. S.W. ", "Mom12345", 530
-*/    
-        // do you have passwords like this ..... :)
+        Item item2 = new Item("Garmin Forerunner 935",
+                "Premium GPS running/triathlon watch with wrist-based heart rate ",
+                284.49);
 
- 
-       // YOUR CODE HERE
+        Item item3 = new Item("CROC Classic Clog",
+                "Iconic clog that started a comfort revolution around the world", 
+                40.99);
+
+        Item item4 = new Item("Adidas Ultra Boost PB",
+                "Offers a plush, yet bouncy ride with an updated upper is built for speed.",
+                105.95);
+
+        Item item5 = new Item("Macbook Pro 13",
+                "1.4GHz quad-core 8th-generation Intel Core i5 processor", 
+                1399.00);
+
+
+
+        Person person1 = new Person("Ava", "Davis", "704 Brickell Ave", 
+                "Superman", 760);
+
+        Person person2 = new Person("John", "Smith", "340 S.W. 13 Street",
+                "myPassword123", 680);
+
+        Person person3 = new Person("Bill", "Johnson", "100 Ocean Dr. S.W. ",
+                "Mom12345", 530);
+
        
-/*     
+                
 System.out.println("");
 System.out.println("//////////////////////////////////////////////");    
 System.out.println("Section 2");       
 System.out.println("//////////////////////////////////////////////");  
 
 
-// GOTO THE MASTERCARD CLASS AND WRITE THE CODE FOR SECTION 2.1 FIRST
+       //Ava
+       Cash cashtemp = new Cash(person1, 400.00);
+       MasterCard mastertemp = new MasterCard(person1, 3500.00);
+       
+       person1.getWallet().add(cashtemp);
+       person1.getWallet().add(mastertemp);
+       
+       person1.financialReport();
+        
+
+       //John
+       cashtemp = new Cash(person2, 400.00);
+       mastertemp = new MasterCard(person2, 500.00);
+       MasterRewards rewardtemp = new MasterRewards(person2, 1500.00);
+       
+       person2.getWallet().add(cashtemp);
+       person2.getWallet().add(mastertemp);
+       person2.getWallet().add(rewardtemp);
+
+       person2.financialReport();
+       
+       
+       //Bill
+       cashtemp = new SecureCash(person3, 1000.00);
+       mastertemp = new MasterCard(person3, 1000.00);
+       rewardtemp = new MasterRewards(person3, 1500.00);
+       
+       person3.getWallet().add(cashtemp);
+       person3.getWallet().add(mastertemp);
+       person3.getWallet().add(rewardtemp);
+       
+       person3.financialReport();
+       
       
-        
-       // Setting up Ava's wallet
-       // Create cash instance for Ava -> person1 with $400
-       // make sure that you wrote section 2.1 code before write this code
-       // YOUR CODE HERE
-       
-       
-
-       // Create Master Card instance for Ava -> person1 with credit limit of $3500
-       // YOUR CODE HERE
-       
-  
-       // add the cash and master card instance to Ava's wallet
-       // YOUR CODE HERE
-       
-        
-
-       // runner a financial report on Ava
-       //YOUR CODE HERE
-       
-   
-        
-
-       // Setting up John's wallet
-       // Create cash instance for John -> person2 with $400
-       // Create Master Card instance for John -> person2 with credit limit $500
-       // Create Master Reward instance for John -> person2 with credit limit $1500
-       // YOUR CODE HERE
-       
-       
-        
-       
-       // add the cash, master card and master reward instance to John's wallet
-       // YOUR CODE HERE
-       
-       
-       
-     
-       
-       // runner a financial report on John
-       //YOUR CODE HERE
-       
-       
-        
-        // Setting up Bill's wallet
-       // Create secure cash instance for Bill -> person3 with $1000
-       // Create Master Card instance for Bill -> person3 with credit limit $1000
-       // Create Master Reward instance for Bill -> person3 with credit limit $1500
-       // YOUR CODE HERE
-       
-  
-        
-       
-        // add the secure cash, master card and master reward instance to Bill's wallet
-       // YOUR CODE HERE
-       
-   
-       
-       // runner a financial report on Bill
-       //YOUR CODE HERE
-       
-
-*/
-       
-       
-       
-/*      
 System.out.println("");
 System.out.println("//////////////////////////////////////////////");    
 System.out.println("Section 3.0");       
 System.out.println("//////////////////////////////////////////////");  
-
-// GOTO THE MasterCard.java file write the code for Section 3.1
-
-*/
 
 /*
 System.out.println("");
 System.out.println("//////////////////////////////////////////////");    
 System.out.println("Section 3.2");       
 System.out.println("//////////////////////////////////////////////");  
+*/
         
-            // call the infoReport method on Ava's mastercard
-            // YOUR CODE HERE
-            
-            
-            // call the infoReport method on John's mastercard
-            // YOUR CODE HERE
-            
-            
-            // call the infoReport method on Bill's master rewards
-            // YOUR CODE HERE
-           
-            
-/*
-            
+        //Calling Info Reports
+        ((MasterCard)person1.getWallet().get(1)).infoReport();
+        ((MasterCard)person2.getWallet().get(1)).infoReport();
+        ((MasterCard)person3.getWallet().get(1)).infoReport();
+                       
             
 /*
 System.out.println("");

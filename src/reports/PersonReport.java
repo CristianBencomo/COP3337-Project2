@@ -1,3 +1,6 @@
+/*
+    Do not modify this class
+*/
 
 package reports;
 
@@ -5,10 +8,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class PersonReport extends Report{
-    
-    // DO NOT CHANGE THE ACCESS MODIFIERS NAYWHERE
-    // I WILL TAKE A LOT OF POINT OFF IF YOU DO
-   
+  
     //----------------------------------------
     // constructor 
     //----------------------------------------  

@@ -6,9 +6,6 @@ import java.util.Map;
 
 
 public class CreditCardReport extends Report {
-    
-    // DO NOT CHANGE THE ACCESS MODIFIERS NAYWHERE
-    // I WILL TAKE A LOT OF POINT OFF IF YOU DO
    
     //----------------------------------------
     // constructor 

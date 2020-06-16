@@ -1,10 +1,9 @@
+/*
+    Do not modify this class
+*/
 package entities;
 
 public class Item {
-     // DO NOT CHANGE THE ACCESS MODIFIERS NAYWHERE
-    // I WILL TAKE A LOT OF POINT OFF IF YOU DO
-    
-    //  THIS CLASS CODE IS OK
     
     //----------------------------------------
     // instance variables

@@ -13,12 +13,7 @@ import reports.CreditCardReport;
 
 
 public class MasterRewards extends MasterCard {
-    
-    // DO NOT CHANGE THE ACCESS MODIFIERS NAYWHERE
-    // I WILL TAKE A LOT OF POINT OFF IF YOU DO
-   
-    
-    
+     
     protected int rewardPoints ;
     
     public MasterRewards(Person cardHolder, double creditLimit) {

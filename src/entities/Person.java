@@ -12,9 +12,6 @@ import reports.Reporter;
 
 
 public class Person{
-    // DO NOT CHANGE THE ACCESS MODIFIERS NAYWHERE
-    // I WILL TAKE A LOT OF POINT OFF IF YOU DO
-   
     
     //----------------------------------------
     // class variables
@@ -110,10 +107,7 @@ public class Person{
    //-----------------------------------------------------------
 
     public void personReport(){
-  
-        // look at this carefully
-        // look at the constructors type and the variable type
-        
+          
         Map<String, Object> map = new LinkedHashMap<>();
         
         map.put("First Name", firstName);
@@ -133,9 +127,6 @@ public class Person{
     }
        
     public void financialReport(){
-  
-        // look at this carefully
-        // look at the constructors type and the variable type
         
         Map<String, Object> map = new LinkedHashMap<>();
         
@@ -161,7 +152,7 @@ public class Person{
         }
         
         map.put("Wallet", walletContents);
-         map.put("Total Credit Limit", String.format("%-10.2f",totalCreditLimit) );
+        map.put("Total Credit Limit", String.format("%-10.2f",totalCreditLimit) );
         map.put("Credit Balance", String.format("\t%-10.2f",creditBalance) );
         map.put("Cash", String.format("\t\t%-10.2f", cash) );
         

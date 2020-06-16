@@ -1,16 +1,14 @@
+/*
+    Do not modify this class
+*/
+
 package payments.credit;
 
 import entities.Item;
 import entities.Person;
 
 
-public abstract class CreditCard {
-    
-    // DO NOT CHANGE THE ACCESS MODIFIERS NAYWHERE
-    // I WILL TAKE A LOT OF POINT OFF IF YOU DO
-    
-    // THIS CLASS IS OK
-    
+public abstract class CreditCard {    
     
     //----------------------------------------
     // class variables
@@ -29,7 +27,6 @@ public abstract class CreditCard {
     //----------------------------------------
     // Constructor
     //----------------------------------------
-
     public CreditCard(Person cardHolder, double creditLimit, double balance) {
         this.cardHolder = cardHolder;
         this.creditLimit = creditLimit;
