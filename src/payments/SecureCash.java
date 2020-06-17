@@ -9,7 +9,7 @@ import reports.Reporter;
 import transactions.SecureTransaction;
 
 
-public class SecureCash extends Cash {
+public class SecureCash extends Cash implements Reporter{
 
     //----------------------------------------
     // class variables

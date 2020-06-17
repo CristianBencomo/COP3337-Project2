@@ -118,20 +118,20 @@ System.out.println("//////////////////////////////////////////////");
 System.out.println("Section 3.0");       
 System.out.println("//////////////////////////////////////////////");  
 
-/*
+
 System.out.println("");
 System.out.println("//////////////////////////////////////////////");    
 System.out.println("Section 3.2");       
 System.out.println("//////////////////////////////////////////////");  
-*/
+
         
         //Calling Info Reports
         ((MasterCard)person1.getWallet().get(1)).infoReport();
         ((MasterCard)person2.getWallet().get(1)).infoReport();
-        ((MasterCard)person3.getWallet().get(1)).infoReport();
+        ((MasterCard)person3.getWallet().get(2)).infoReport(); //specified master rewards by assignment
                        
             
-/*
+
 System.out.println("");
 System.out.println("//////////////////////////////////////////////");     
 System.out.println("Section 4");       
@@ -146,29 +146,17 @@ System.out.println("//////////////////////////////////////////////");
         System.out.println("---------------------------------------------");
         System.out.println(person1.getFirstName() + " " + person1.getLastName() + " buying");
         System.out.println("---------------------------------------------");
-        // buying items
-        // Ava is buying stuff
-        // use the makePurchase method for the following
-        // Use Ava's master card to buy item1
-        // Use Ava's master card to buy item2
-        // Use Ava's cash to buy item2
+
+
+        //Do differently MAybe??? (see instructions on pdf)
+        ((MasterCard)person1.getWallet().get(1)).makePurchase(item1);
+        ((MasterCard)person1.getWallet().get(1)).makePurchase(item2);
+        ((Cash)person1.getWallet().get(0)).makePurchase(item2);
         
-       // YOUR CODE HERE
-  
         
-       
-        // look at this difference here
-        // finish the code below for Ava to buy item5 using her master card
-        // MAKE USE YOU GOT THE RIGHT CARD I WILL CHECK THIS
-        // COMPLETED CODE BELOW
-        
-        ((MasterCard)person1
-        
-         // run the person financial report on Ava
-         // YOUR CODE HERE
-         
-  
-       
+        ((MasterCard)person1.getWallet().get(1)).makePurchase(item5);
+
+         person1.financialReport();
 
 
 
@@ -176,40 +164,27 @@ System.out.println("//////////////////////////////////////////////");
         System.out.println("---------------------------------------------");
         System.out.println(person2.getFirstName() + " " + person2.getLastName() + " buying");
         System.out.println("---------------------------------------------");
-       
-        // buying items
-        // John is buying stuff
-        // use the makePurchase method for the following
-        // Use John's master card to buy item1
-        // Use John's master card to buy item2
-        // Use John's master card to buy item3
-        // Use John's master card to buy item4
-
-
-        // YOUR CODE HERE
-        
-        // Use John's cash to buy item2
-        // YOUR CODE HERE
-        
-        // Use John's master rewards to buy item1
-        // Use John's master rewards to buy item2
-        // Use John's master rewards to buy item3
-        // Use John's master rewards to buy item4
-        // Use John's master rewards to buy item5
-        // YOUR CODE HERE
 
         
-        // look at this difference here
-        // finish the code below for John to buy item1 using her master rewards
-        // MAKE USE YOU GOT THE RIGHT CARD I WILL CHECK THIS
-        // COMPLETED CODE BELOW
+        ((MasterCard)person2.getWallet().get(1)).makePurchase(item1);
+        ((MasterCard)person2.getWallet().get(1)).makePurchase(item2);
+        ((MasterCard)person2.getWallet().get(1)).makePurchase(item3);
+        ((MasterCard)person2.getWallet().get(1)).makePurchase(item4);
 
-        ((MasterRewards)person2
+        ((Cash)person2.getWallet().get(0)).makePurchase(item2);
+
+        ((MasterRewards)person2.getWallet().get(2)).makePurchase(item1);
+        ((MasterRewards)person2.getWallet().get(2)).makePurchase(item2);
+        ((MasterRewards)person2.getWallet().get(2)).makePurchase(item3);
+        ((MasterRewards)person2.getWallet().get(2)).makePurchase(item4);
+        ((MasterRewards)person2.getWallet().get(2)).makePurchase(item5);
+
+
+        ((MasterRewards)person2.getWallet().get(2)).makePurchase(item1);
         
-         // run the person financial report on John
-         // YOUR CODE HERE
+
+        person2.financialReport();
          
-        
         
         
         System.out.println("\n");
@@ -217,30 +192,21 @@ System.out.println("//////////////////////////////////////////////");
         System.out.println(person3.getFirstName() + " " + person3.getLastName() + " buying");
         System.out.println("---------------------------------------------");
         
-         // buying items
-        // Bill is buying stuff
-        // use the makePurchase method for the following
-        // Use Bill's secure cash to buy item1
-        // Use Bill's secure cash to buy item2
-        // Use Bill's secure cash to buy item5
-        // YOUR CODE HERE
-        
-        // Use Bill's master card to buy item4
-        // YOUR CODE HERE
 
+        ((SecureCash)person3.getWallet().get(0)).makePurchase(item1);
+        ((SecureCash)person3.getWallet().get(0)).makePurchase(item2);
+        ((SecureCash)person3.getWallet().get(0)).makePurchase(item5);
 
-        // Use Bill's master rewards to buy item3
-        // YOUR CODE HERE        
-        
-       
+        ((MasterCard)person3.getWallet().get(1)).makePurchase(item4);
+  
+        ((MasterRewards)person3.getWallet().get(2)).makePurchase(item3);
 
-        // run the person financial report on Bill
-        // YOUR CODE HERE
+        person3.financialReport();
      
-*/
 
 
-/*
+
+
 System.out.println("");
 System.out.println("//////////////////////////////////////////////");     
 System.out.println("Section 5");       
@@ -250,25 +216,17 @@ System.out.println("//////////////////////////////////////////////");
         //Class Static Info
         System.out.println("");
         System.out.println("---------------------------------------------------");
-        System.out.println("Class Statics");
+        System.out.println("Class Statistics");
         System.out.println("---------------------------------------------------");
-        
-        // complete the system.out.println code to get the right output
-        // DO NOT CHANGE THE ACCESS MODIFIER OF THE VARAIBLE IN THE CLASS
-        // IF YOU DO THIS YOU WILL GET POINTS TAKEN OFF
-        // hint: you may need to add method to the some classes... 
-        //       you need figure out which classes. Also you may need to add some 
-        //       code to some contsructors
-        // COMPLETE CODE BELOW 
                
-        System.out.println("Number of Person in System:\t\t\t" +
-       System.out.println("Number of all Cash type transactions:\t\t" + 
-        System.out.println("Number of all Credit Card type transactions:\t" + 
+        System.out.println("Number of Person in System:\t\t\t" + Person.getPersonCount());
+        System.out.println("Number of all Cash type transactions:\t\t" + Cash.getCashTransactionCount());
+        System.out.println("Number of all Credit Card type transactions:\t" + CreditCard.getCreditTransactionCount());
         System.out.println("---------------------------------------------------");
- */
+ 
  
 
-/*
+
 System.out.println("");
 System.out.println("//////////////////////////////////////////////");     
 System.out.println("Section 6");       
@@ -279,18 +237,15 @@ System.out.println("//////////////////////////////////////////////");
         System.out.println("---------------------------------------------------");
         System.out.println("Logger Data");
         System.out.println("---------------------------------------------------");
+
+
+        Logger logger = new Logger();
+        logger.runReports();
         
-        // I wish to ssee all the messages store in the logger 
-        // write the code to do this
-        // HINT: create an Logger  instance and use it
-        // YOUR CODE HERE
+       
+        
 
 
-        System.out.println("---------------------------------------------------");
-*/       
-
-
-/*
 System.out.println("");
 System.out.println("//////////////////////////////////////////////");     
 System.out.println("Section 7");       
@@ -303,24 +258,13 @@ System.out.println("//////////////////////////////////////////////");
         System.out.println("REPORTER INTERFACE");
         System.out.println("---------------------------------------------------");
         
-        // Here you are working with interfaces.... 
-        // PAY ATTENTION TO TYPES OF AN OBJECT
-        // ask yourself the question what are all types the object you are
-        // working with can be
-        
-        
-        // processReport is in this class
-        // run the process report with Ava (person1)
-        // run the process report with the logger object
-        // run the process report with Bill's secure cash object
-        // run the process report with Ava's master card object
-        
-        // YOU WILL NEED TO ADD CODE THE NEED CLASSES IN THIS STEP TO MAKE IT WORK
-        // YOU NEED FIGURE OUT WHICH CLASSES 
-        // Hint: look at the UML Diagrams
-        // YOUR CODE HERE
+
+        processReports(person1);
+        processReports(logger);
+        processReports( ((SecureCash)person3.getWallet().get(0)) );
+        processReports( ((MasterCard)person1.getWallet().get(1)) );
     
-*/       
+       
 
 
 /*

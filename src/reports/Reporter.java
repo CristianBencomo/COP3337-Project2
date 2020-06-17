@@ -18,7 +18,7 @@ from: https://www.studytonight.com/java/java-interface.php
 Important points about interface or summary of article:
 
     We can’t create instance(interface can’t be instantiated) of interface but we can 
-        make reference of it that refers to the Object of its implementing class.
+    make reference of it that refers to the Object of its implementing class.
     A class can implement more than one interface.
     An interface can extends another interface or interfaces (more than one interface) .
     A class that implements interface must implements all the methods in interface.
@@ -44,9 +44,6 @@ from: https://www.geeksforgeeks.org/interfaces-in-java/
 package reports;
 
 public interface Reporter {
-    
-    // DO NOT CHANGE THE ACCESS MODIFIERS NAYWHERE
-    // I WILL TAKE A LOT OF POINT OFF IF YOU DO
    
     public void runReports();
     

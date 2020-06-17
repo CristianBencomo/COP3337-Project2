@@ -9,15 +9,6 @@ import reports.Reporter;
 
 public class Logger implements Reporter{
     
-    // DO NOT CHANGE THE ACCESS MODIFIERS NAYWHERE
-    //  I WILL TAKE A LOT OF POINT OFF IF YOU DO
-    
-    // THIS CLASS CODE IS OK
-    
-    // LOOK AT THIS CODE CAREFULLY
-    // I DID A WORKAROUND TO MAKE IT WORK 
-    // WHAT DID I DO AND WHY...... (you will see something interesting)
-    
     //----------------------------------------
     // class varaivles
     //----------------------------------------
@@ -32,10 +23,7 @@ public class Logger implements Reporter{
     
     // hack here
     public Logger(){
-        
-        // WHY IS THE NO CODE HERE
-        // WHY DID I NEED A CONSTRUCTOR
-        // HINT LOOK AT THE runReportS()  
+    
     }
     
     //----------------------------------------
@@ -45,12 +33,8 @@ public class Logger implements Reporter{
     // why did I make this method final
     public static final void output(String sender, String message){
         
-        // understand the formatted output 
-        // match this code to the console output
         String output =  String.format("[%d]:[%s] -> %s", logNumber, sender, message);
         
-        // understand what I am do here
-        // where are all the messages store of the entire system
         messages.add(output);
         
         System.out.println("");
@@ -91,5 +75,7 @@ public class Logger implements Reporter{
         loggerReport.display();
         
     }
+
+    
     
 }// end of class

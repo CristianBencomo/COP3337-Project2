@@ -1,7 +1,3 @@
-/*
-    Do not modify this class
-*/
-
 package payments.credit;
 
 import entities.Item;
@@ -83,6 +79,10 @@ public abstract class CreditCard {
 
     public String getType() {
         return type;
+    }
+
+    public void addToTransactionCount() {
+        creditTransactionCount++;
     }
 
 }//end class

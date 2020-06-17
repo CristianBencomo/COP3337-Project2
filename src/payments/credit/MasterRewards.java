@@ -73,9 +73,13 @@ public class MasterRewards extends MasterCard {
                 // why did I cast this
                 rewardPoints +=  (int)item.getPrice(); 
                 
-                CreditCard.setCreditTransactionCount(CreditCard.getCreditTransactionCount()+ 1);
+                //Does not match pdf, I believe the assignment
+                //PDF had a mistake that did not include Reward transactions
+                super.addToTransactionCount();
 
-            }else{
+            }
+            
+            else{
                 String pattern = "MM-dd-YYYY|HH:mm:ss";
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
                 String dateStr = simpleDateFormat.format(new Date());
@@ -83,7 +87,10 @@ public class MasterRewards extends MasterCard {
                 String sender = "MC-" + cardHolder.getLastName();
                 String message = "<" + dateStr + ">" + " Charge declined due to credit limits";
                 Logger.output(sender, message);
+                
             }//end if-else
+            
+            
     }
         
     public void infoReport(){

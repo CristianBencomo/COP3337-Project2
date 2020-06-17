@@ -17,7 +17,7 @@ import reports.Reporter;
 import transactions.SecureTransaction;
 
 
-public class MasterCard  extends CreditCard {
+public class MasterCard  extends CreditCard implements Reporter{
 
     //----------------------------------------
     // class variables
@@ -47,12 +47,12 @@ public class MasterCard  extends CreditCard {
         type = "MasterCard";
         totalFees = 0;
         
-/*
+
 System.out.println("");
 System.out.println("//////////////////////////////////////////////");    
 System.out.println("Section 2.1");       
 System.out.println("//////////////////////////////////////////////");  
-*/
+
         
         if(cardHolder.getCreditScore() >= 740){
             interestRate = 10.99;
@@ -80,12 +80,12 @@ System.out.println("//////////////////////////////////////////////");
         boolean hasBeenIssued = false;
         
         cardNumber = "";
-/*        
+        
 System.out.println("");
 System.out.println("//////////////////////////////////////////////");    
 System.out.println("Section 3.1");       
 System.out.println("//////////////////////////////////////////////");  
-      */
+      
 
         while (!hasBeenIssued) { //While card has not been issued
 
@@ -152,8 +152,10 @@ System.out.println("//////////////////////////////////////////////");
             fees();
             
             //CreditCard.setCreditTransactionCount(CreditCard.getCreditTransactionCount()+ 1);
-            
-        }else{
+            //I implemented a different personalized method
+            super.addToTransactionCount();
+        }
+        else{
             String pattern = "MM-dd-YYYY|HH:mm:ss";
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
             String dateStr = simpleDateFormat.format(new Date());
@@ -162,6 +164,8 @@ System.out.println("//////////////////////////////////////////////");
             String message = "<" + dateStr + ">" + " Charge declined due to credit limits";
             Logger.output(sender, message);
         }//end if-else
+
+        
     }
     
     

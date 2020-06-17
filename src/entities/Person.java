@@ -11,7 +11,7 @@ import reports.PersonReport;
 import reports.Reporter;
 
 
-public class Person{
+public class Person implements Reporter {
     
     //----------------------------------------
     // class variables
@@ -45,7 +45,7 @@ public class Person{
 
         wallet = new ArrayList<>();
 
-
+        personCount++;
 
     }    
 

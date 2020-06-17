@@ -6,11 +6,6 @@ import java.util.Map;
 
 public class LoggerReport extends Report{
     
-    // DO NOT CHANGE THE ACCESS MODIFIERS NAYWHERE
-    // I WILL TAKE A LOT OF POINT OFF IF YOU DO
-   
-    // THIS CLASS OS OK
-    
     //----------------------------------------
     // constructor 
     //----------------------------------------  
