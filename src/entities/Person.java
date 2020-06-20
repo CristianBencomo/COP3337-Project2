@@ -5,7 +5,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import payments.Cash;
 import payments.credit.CreditCard;
-import payments.credit.MasterCard;
 import reports.FinancialReport;
 import reports.PersonReport;
 import reports.Reporter;
@@ -28,7 +27,7 @@ public class Person implements Reporter {
     private String address;
     private String password; 
     private int creditScore;
-    private ArrayList wallet;
+    private ArrayList <Object> wallet;
 
     public Person(String firstName, 
                   String lastName, 
@@ -43,7 +42,7 @@ public class Person implements Reporter {
         this.creditScore = creditScore;
         
 
-        wallet = new ArrayList<>();
+        wallet = new ArrayList<Object>();
 
         personCount++;
 
@@ -85,7 +84,7 @@ public class Person implements Reporter {
         this.address = address;
     }
 
-    public ArrayList getWallet() {
+    public ArrayList <Object> getWallet() {
         return wallet;
     }
 

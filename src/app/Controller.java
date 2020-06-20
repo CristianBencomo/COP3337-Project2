@@ -7,7 +7,7 @@
 // SEMESTER: The current semester: Summer 2020
 // CLASSTIME: Online
 //
-// Project: Put what this project is: Project 2
+// Project: Project 2
 // DUE: June 21st 2020
 //
 // CERTIFICATION: I understand FIU’s academic policies, and I certify that this work is my 
@@ -19,8 +19,6 @@ package app;
 import entities.Item;
 import entities.Logger;
 import entities.Person;
-import java.util.ArrayList;
-import java.util.Random;
 import payments.Cash;
 import payments.SecureCash;
 import payments.credit.CreditCard;
@@ -148,7 +146,6 @@ System.out.println("//////////////////////////////////////////////");
         System.out.println("---------------------------------------------");
 
 
-        //Do differently MAybe??? (see instructions on pdf)
         ((MasterCard)person1.getWallet().get(1)).makePurchase(item1);
         ((MasterCard)person1.getWallet().get(1)).makePurchase(item2);
         ((Cash)person1.getWallet().get(0)).makePurchase(item2);
@@ -266,8 +263,6 @@ System.out.println("//////////////////////////////////////////////");
     
        
 
-
-/*
 System.out.println("");
 System.out.println("//////////////////////////////////////////////");     
 System.out.println("Section 8");       
@@ -279,29 +274,10 @@ System.out.println("//////////////////////////////////////////////");
         System.out.println("SECURE INTERFACE");
         System.out.println("---------------------------------------------------");
         
-        // Here you are working with interfaces.... 
-        // PAY ATTENTION TO TYPES OF AN OBJECT
-        // ask yourself the question what are all types the object you are
-        // working with can be
+
+        processSecureTransaction( ((MasterCard)person1.getWallet().get(1)) );
+        processSecureTransaction( ((SecureCash)person3.getWallet().get(0)) );
         
-        // processReport is in this class
-       
-        // run the process report with Ava's master card object
-        // run the process report with BILL's  secure cash object
-        
-        // WHY DO THESE NOT WORK
-        // processSecureTransaction on the person1 object
-        // processSecureTransaction no the logger object
-       
-        // why does this work ----> does it implements SecureTransactions
-        // processSecureTransaction on the mcReward3 object
-        
-        // YOU WILL NEED TO ADD CODE THE NEED CLASSES IN THIS STEP TO MAKE IT WORK
-        // YOU NEED FIGURE OUT WHICH CLASSES 
-        // YOUR CODE HERE 
-        
-   
-*/
 
     }// end main()
     
@@ -310,23 +286,11 @@ System.out.println("//////////////////////////////////////////////");
     //----------------------------------------  
     
     public static void processReports(Reporter reporter){
-        
-        // how is this working
-        // which object type is excuting this
-        // which code is running
-        // important you will be tested on this understanding
         reporter.runReports();
-           
     }
     
     public static void processSecureTransaction(SecureTransaction secureTransaction){
         
-        // how is this working
-        // which object type is excuting this
-        // which code is running
-        // important you will be tested on this understanding
-        
-        //
         String pin = secureTransaction.generateTransactionSecret();
         
         
@@ -347,29 +311,15 @@ System.out.println("//////////////////////////////////////////////");
     
     
     public static void makePurchase(CreditCard creditCard, Item item){
-        
-            // how is this working
-            // which object type is excuting this
-            // which code is running
-            // important you will be tested on this understanding
             creditCard.makePurchase(item);  
     }
     
     public static void makePurchase(Cash cash, Item item){
-        
-            // how is this working
-            // which object type is excuting this
-            // which code is running
-            // important you will be tested on this understanding
             cash.makePurchase(item);  
     }
     
      public static void makePurchase(Object obj, Item item){
         
-            // how is this working
-            // which object type is excuting this
-            // which code is running
-            // important you will be tested on this understanding
             if(obj instanceof CreditCard){
                 ((CreditCard)obj).makePurchase(item); 
             }else if (obj instanceof Cash){

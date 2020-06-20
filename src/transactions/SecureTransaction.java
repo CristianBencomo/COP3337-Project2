@@ -47,28 +47,15 @@ import entities.Item;
 
 public interface SecureTransaction {
     
-    // interface can have static constants
-    // this is static final public
     final double VERSION = 0.9;
     
-    // interface can have variable
-    // can not do this why
-    // int numberOfSecureTransaction = 0;
-    // double totalTransactionAmount =0;
     
-    
-    // this is public  method
-    // public not needed
     String generateTransactionSecret();
     
     public void secureTransaction(Item item);
     
   
-    // after Java 1.8 interface can jave static methods
-    //public static method
     
-    // DO I NEED TO WRTIE THIS METHOD
-    // OR CAN GET THE VERSION WITHOUT THIS METHOD....
     static double version(){
         return VERSION;
     }

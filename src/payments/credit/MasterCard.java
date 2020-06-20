@@ -11,13 +11,11 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;
 import reports.CreditCardReport;
-import reports.FinancialReport;
-import reports.PersonReport;
 import reports.Reporter;
 import transactions.SecureTransaction;
 
 
-public class MasterCard  extends CreditCard implements Reporter{
+public class MasterCard  extends CreditCard implements Reporter, SecureTransaction{
 
     //----------------------------------------
     // class variables
@@ -103,6 +101,7 @@ System.out.println("//////////////////////////////////////////////");
 
             if (!issuedNumbers.contains(cardNumber)) { //if card number has not been issued
                 hasBeenIssued = true; //Issue the card
+                issuedNumbers.add(cardNumber);
             }
         }
     }
@@ -276,9 +275,13 @@ System.out.println("//////////////////////////////////////////////");
         String pin = "";
         
         // YOUR CODE HERE 
-        
-        //debugging code
-       // System.out.println("Pin:\t" + pin);
+        char cardNumberArray [] = cardNumber.toCharArray();
+        for (int i=0; i<=cardNumberArray.length; i++) {
+
+            if (i%5 == 0) {
+                pin += cardNumberArray[i];
+            }
+        }
        
         return pin;
      }

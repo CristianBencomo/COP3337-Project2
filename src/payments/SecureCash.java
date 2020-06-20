@@ -8,13 +8,11 @@ import java.util.Date;
 import reports.Reporter;
 import transactions.SecureTransaction;
 
-
-public class SecureCash extends Cash implements Reporter{
+public class SecureCash extends Cash implements Reporter, SecureTransaction{
 
     //----------------------------------------
     // class variables
     //----------------------------------------    
-    // you will use this to create secureTransaction Pin
     private static final String[] letterIndex = { " ", "a", "b", "c", "d", "e", "f", "g", "h", 
                                          "i", "j", "k", "l", "m", "n", "o", "p", "q", 
                                          "r", "s", "t", "u", "v", "w", "x", "y", "z" };
@@ -84,32 +82,27 @@ System.out.println("//////////////////////////////////////////////");
 System.out.println("Section 9");       
 System.out.println("//////////////////////////////////////////////");  
         
-
-        
-        
-        //if you are cash type
-        // take the first four letters of the Last name 
-        // then for each letter index letter to location in the alphabet
-        // same index for upper and lower case
-        // example
-        // Index:  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 ..... 25 26
-        // Letter: a b c d e f g h i j  k  l  m  n  o  ....  y  z   
-        // mod each letter index by 10 to generate pin
-        
-        // Example: first Name = Richard
-        // W   h   i   t <- first four letters
-        // 23  8   9   20 <- index to alphabet location
-        // 3   8   9   0 <- %10 
-        // 3890 <- final pin
-        
          String pin = "";
          
-         //YOUR CODE HERE
+         String characters = getPerson().getLastName().substring(0,4);
+         String character;
+         int pinDigit; 
          
 
-       
-        //debugging code
-       // System.out.println("Pin:\t" + pin);
+         for (int i=1; i<=characters.length(); i++) {
+            
+            character = characters.substring(i-1, i);
+
+            for (int j=0; j<letterIndex.length; j++) {
+
+                if ( character.equalsIgnoreCase(letterIndex[j]) ) {
+                    pinDigit = j;
+                    pinDigit = pinDigit % 10;
+                    pin += pinDigit;
+                    break;
+                }
+            }    
+        }
         
         return pin;
      }
