@@ -1,6 +1,4 @@
-
 package payments.credit;
-
 import entities.Item;
 import entities.Logger;
 import entities.Person;
@@ -29,7 +27,6 @@ public class MasterCard  extends CreditCard implements Reporter, SecureTransacti
     protected String cardNumber; 
     protected double totalFees;
     
-    // bad design here
     protected ArrayList<Item> purchases;
     protected ArrayList<Date> transactionTime;
     
@@ -262,19 +259,9 @@ System.out.println("");
 System.out.println("//////////////////////////////////////////////");     
 System.out.println("Section 10");       
 System.out.println("//////////////////////////////////////////////");  
-        
-                
-        // if you are a creditcard type
-        // from left to right make the pin from following digits of the card number
-        // 1, 5, 9, 13
-        // Example     
-        // 2341 4833 9332 9933   <- card number
-        // 2    4    9    9      <- selected number
-        // pin is 2499           <- generated pin
 
         String pin = "";
-        
-        // YOUR CODE HERE 
+         
         char cardNumberArray [] = cardNumber.toCharArray();
         for (int i=0; i<=cardNumberArray.length; i++) {
 

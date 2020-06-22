@@ -1,6 +1,3 @@
-/*
-    Do not modify this class
-*/
 package entities;
 
 public class Item {

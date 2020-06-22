@@ -1,4 +1,3 @@
-
 package payments.credit;
 
 import entities.Item;
@@ -30,7 +29,6 @@ public class MasterRewards extends MasterCard {
        
         if(purchases.size() > 0 && purchases.size()%5 == 0){
             
-            //why am I using the super here
             fee = balance * super.getInterestRate()/400;
             totalFees = fee;
             
@@ -70,11 +68,8 @@ public class MasterRewards extends MasterCard {
 
                 fees();
                 
-                // why did I cast this
                 rewardPoints +=  (int)item.getPrice(); 
                 
-                //Does not match pdf, I believe the assignment
-                //PDF had a mistake that did not include Reward transactions
                 super.addToTransactionCount();
 
             }

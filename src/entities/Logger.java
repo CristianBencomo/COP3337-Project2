@@ -30,7 +30,6 @@ public class Logger implements Reporter{
     // class methods
     //----------------------------------------
     
-    // why did I make this method final
     public static final void output(String sender, String message){
         
         String output =  String.format("[%d]:[%s] -> %s", logNumber, sender, message);
@@ -52,7 +51,6 @@ public class Logger implements Reporter{
     //----------------------------------------
     
     @Override
-    // hacked the OO code to make it work
     public void runReports(){
         
         Map<String, Object> map = new LinkedHashMap<>();

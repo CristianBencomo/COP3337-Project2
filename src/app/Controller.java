@@ -4,7 +4,7 @@
 //
 // CLASS: COP3337
 // SECTION: Your class section: RVDC
-// SEMESTER: The current semester: Summer 2020
+// SEMESTER: Summer 2020
 // CLASSTIME: Online
 //
 // Project: Project 2

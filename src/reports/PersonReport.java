@@ -1,7 +1,3 @@
-/*
-    Do not modify this class
-*/
-
 package reports;
 
 import java.util.ArrayList;
